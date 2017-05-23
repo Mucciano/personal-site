@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: row;
     background-color: white;
-    padding: 3rem;
+    padding: 2rem 3rem;
 }
 .text {
     display: flex;
@@ -18,13 +18,19 @@
     margin-right: 3rem;
 }
 
+.name {
+    margin-bottom: 0;
+}
+
 .icons {
     display: flex;
 
 }
 
-.headerImage {
-    border-radius: 50%;
-    box-shadow: 10px 10px 31px 0px rgba(0,0,0,0.75);
+.headerImgCont {
+    padding-top: 1rem;
+}
 
+.headerImage {
+    border: solid 0.1rem;
 }

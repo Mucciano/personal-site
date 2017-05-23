@@ -1,18 +1,16 @@
 import React from 'react';
+import CloudIcon from '../../data/icons/cloud-app.jsx';
+import './card-header.css';
 
-function Header(){
+function CardHeader(){
     return(
-        <div>
-            <h1></h1>
-            <h2></h2>
-            <div class='icons'>
-                <a href="">external</a>
+        <div className='cardHeaderBody'>
+            <div className='cardHeaderIcon'>
+                <CloudIcon/>
             </div>
-            <div>
-                <img src= alt=""/>
-            </div>
+            <span>Web Application: React - GraphQL - AWS Lamda</span>
         </div>
     )
 }
 
-export default (Header);
+export default (CardHeader);
