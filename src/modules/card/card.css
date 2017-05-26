@@ -1,21 +1,18 @@
 .cardBody {
-    display: flex;
-    justify-content: center;
     margin-top: 3rem;
 }
 
-.cardContainer {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    border: solid lightgray 0.1rem;
-    box-shadow: 6px 10px 6px -9px rgba(0,0,0,0.75);
-}
 
 .cardContainer:hover {
-    background: #e3e4e5;
 }
 
+.cardImg {
+    border: solid 1px lightgray;
+    margin-bottom: 1rem;
+}
+
+.cardText {
+}
 .cardSubText {
     margin-bottom: 0;
 }

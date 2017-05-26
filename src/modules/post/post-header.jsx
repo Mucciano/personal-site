@@ -1,14 +1,14 @@
 import React from 'react';
-import image from '../../data/images/takeshape-post.png';
+import image from '../../data/images/post-header-face.jpg';
 
 function PostHeader(){
     return(
         <div className='postHeaderBody'>
-            <img src="" alt=""/>
-            <div>
-                <h2>Nick Palmucci</h2>
-                <h3>Coder, Thinker</h3>
-                <h3>Brooklyn, NY</h3>
+            <img src={image} alt="" className='postHeaderImg'/>
+            <div className='postHeaderText'>
+                <h3>Nick Palmucci</h3>
+                <p>Coder, Thinker</p>
+                <p>Brooklyn, NY</p>
             </div>
         </div>
     )

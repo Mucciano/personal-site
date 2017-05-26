@@ -1,10 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import './index.css';
-import {appData} from './data/app-data';
+
+import {
+    BrowserRouter as Router,
+    Route
+} from 'react-router-dom'
+import App from './app/App';
+import Post from './modules/post/post';
 
 ReactDOM.render(
-  <App appData={appData}/>,
-  document.getElementById('root')
+    <Router>
+        <div>
+            <Route exact path="/" component={App}/>
+            <Route path="/post" component={Post}/>
+        </div>
+    </Router>,
+document.getElementById('root')
 );

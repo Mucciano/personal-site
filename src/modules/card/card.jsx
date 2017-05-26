@@ -1,19 +1,18 @@
 import React from 'react';
-import image from '../../data/images/takeshape.png';
+import image from '../../data/images/takeshapeTwo.png';
 import CardHeader from './card-header'
 import './card.css';
 
 function Card(){
     return(
         <div className="cardBody">
-            <div className="cardContainer">
+            <div className="cardContainer row">
                 <CardHeader/>
-                <div>
-                    <img src={image} alt=""/>
-                </div>
-                <div className="cardText">
-                    <h1>TakeShape CMS</h1>
-                    <h4 className="cardSubText">August, 2016 - Present React, takeshape- client takeshape-api takeshape-ssg</h4>
+                <img className='cardImg ten columns offset-by-one' src={image} alt=""/>
+
+                <div className="cardText row">
+                    <h3 className='six columns offset-by-one'>TakeShape CMS</h3>
+                    <h4 className="ten columns offset-by-one">August, 2016 - Present React, takeshape- client takeshape-api takeshape-ssg</h4>
                 </div>
             </div>
         </div>

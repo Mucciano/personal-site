@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-import Header from './modules/header/header';
-import Card from './modules/card/card';
-import './App.css';
+import Header from '../modules/header/header';
+import Card from '../modules/card/card';
+
 
 class App extends Component {
-     render() {
+    render() {
         return (
-            <div className="App">
+            <div>
                 <Header/>
                 <Card/>
             </div>
+
         );
     }
 }

@@ -4,7 +4,7 @@ import './card-header.css';
 
 function CardHeader(){
     return(
-        <div className='cardHeaderBody'>
+        <div className='cardHeaderBody ten columns offset-by-one'>
             <div className='cardHeaderIcon'>
                 <CloudIcon/>
             </div>
