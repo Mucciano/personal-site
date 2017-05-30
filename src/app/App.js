@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../modules/header/header';
-import Card from '../modules/card/card';
+import Cards from '../modules/cards/cards';
 
 
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
         return (
             <div>
                 <Header/>
-                <Card/>
+                <Cards/>
             </div>
 
         );
