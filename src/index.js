@@ -14,7 +14,7 @@ ReactDOM.render(
     <Router>
         <div>
             <Route exact path="/" component={App}/>
-            <Route path="/post" component={Post}/>
+            <Route path="/post/:id" component={Post}/>
         </div>
     </Router>,
 document.getElementById('root')

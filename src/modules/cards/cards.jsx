@@ -11,10 +11,16 @@ export default class Cards extends Component {
             const image = appData[i].cardImage;
             const title = appData[i].cardTitle;
             const body = appData[i].cardDetails;
-            console.log('image',image);
+            const postId = appData[i].postId;
 
             cards[i] = (
-            <Card key={i} image={image} title={title} body={body}/>
+                <Card
+                    key={i}
+                    image={image}
+                    title={title}
+                    body={body}
+                    postId={postId}
+                />
         );
     }
         return (
