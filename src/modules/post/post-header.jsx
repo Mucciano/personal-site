@@ -1,17 +1,19 @@
-import React from 'react';
-import image from '../../data/images/post-header-face.jpg';
+import React, {Component} from "react";
+import CodeIcon from "../../data/icons/code";
 
-function PostHeader(){
-    return(
-        <div className='postHeaderBody'>
-            <img src={image} alt="" className='postHeaderImg'/>
-            <div className='postHeaderText'>
-                <h3>Nick Palmucci</h3>
-                <p>Coder, Thinker</p>
-                <p>Brooklyn, NY</p>
+export default class PostHeader extends Component {
+    componentDidMount() {
+        window.scrollTo(0,0);
+    }
+
+    render() {
+        return(
+            <div className='postHeaderBody' ref={el => this.headerRef = el}>
+                <CodeIcon className=""/>
+                <div className='postHeaderText'>
+                    <span>Nick Palmucci</span>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
-
-export default (PostHeader);
