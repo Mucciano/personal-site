@@ -2,17 +2,11 @@
     margin-top: 3rem;
 }
 
-
-.cardContainer:hover {
-}
-
 .cardImg {
     border: solid 1px lightgray;
     margin-bottom: 1rem;
 }
 
-.cardText {
-}
 .cardSubText {
     margin-bottom: 0;
 }

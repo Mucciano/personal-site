@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom'
 
 function Card(data){
     return(
-        <div className="cardBody">
-            <div className="cardContainer row">
+        <div className="cardBody container">
+            <div className="row">
                 <CardHeader/>
 
                 <img className='cardImg ten columns offset-by-one' src={data.image} alt=""/>
