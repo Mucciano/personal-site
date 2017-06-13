@@ -4,11 +4,6 @@ import  './header.css';
 import FbIcon from '../../data/icons/facebook-box';
 import GmailIcon from '../../data/icons/gmail.jsx';
 import LinkedInIcon from '../../data/icons/linkedin-box';
-import VisibiltySensor from 'react-visibility-sensor'
-
-const onChange = function (isVisible) {
-    console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
-};
 
 export default class Header extends Component {
 
@@ -29,7 +24,6 @@ export default class Header extends Component {
                         <img src={image} className="headerImage" alt=""/>
                     </div>
                 </div>
-                <VisibiltySensor onChange={onChange}/>
             </div>
         )
     }
