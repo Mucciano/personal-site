@@ -8,7 +8,7 @@ export default class PostHeader extends Component {
 
     render() {
         return(
-            <div className='postHeaderBody' ref={el => this.headerRef = el}>
+            <div className='postHeaderBody' style={{display: this.props.display}}>
                 <CodeIcon className=""/>
                 <div className='postHeaderText'>
                     <span>Nick Palmucci</span>
