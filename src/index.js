@@ -7,13 +7,13 @@ import {
     Route
 } from 'react-router-dom';
 
-import App from './app/App';
+import Cards from './modules/cards/cards';
 import Post from './modules/post/post';
 
 ReactDOM.render(
     <Router>
         <div>
-            <Route exact path="/" component={App}/>
+            <Route exact path="/" component={Cards}/>
             <Route path="/post/:id" component={Post}/>
         </div>
     </Router>,
