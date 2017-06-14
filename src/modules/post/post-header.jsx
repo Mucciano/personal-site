@@ -1,5 +1,7 @@
 import React, {Component} from "react";
-import CodeIcon from "../../data/icons/code";
+import {Code, FaceBook, Gmail, LinkedIn} from "../../data/icons/index";
+import {Link} from 'react-router-dom'
+
 
 export default class PostHeader extends Component {
     componentDidMount() {
@@ -9,9 +11,22 @@ export default class PostHeader extends Component {
     render() {
         return(
             <div className='postHeaderBody' style={{display: this.props.display}}>
-                <CodeIcon className=""/>
-                <div className='postHeaderText'>
-                    <span>Nick Palmucci</span>
+                <Link to="/">
+                    <div className='postHeaderText'>
+                        <Code className=""/>
+                        <span>Nick Palmucci</span>
+                    </div>
+                </Link>
+                <div className='postHeaderLinks'>
+                    <Link to="">
+                        <FaceBook color={'white'}/>
+                    </Link>
+                    <Link to="">
+                        <Gmail color={'white'}/>
+                    </Link>
+                    <Link to="">
+                        <LinkedIn color={'white'}/>
+                    </Link>
                 </div>
             </div>
         )
