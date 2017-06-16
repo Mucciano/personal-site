@@ -34,7 +34,8 @@
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 .column,
 .columns {
   width: 100%;
@@ -158,9 +159,14 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  text-decoration: none;
+}
 a:hover {
-  color: #0FA0CE; }
+   }
+
+a:visited {
+  color: inherit;
+}
 
 
 /* Buttons
