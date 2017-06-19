@@ -11,15 +11,21 @@ export default class Cards extends Component {
         super(props);
         this.state = {show: false};
     }
-    onChange = (isVisible) => {
-        if (this.state.show !== !isVisible)    {
-            this.setState({head: !isVisible});
 
+    onChange = (isVisible) => {
+        if (isVisible === false && this.state.show === false) {
+            this.setState({show: true})
+        } else if (isVisible === true && this.state.show === true) {
+            this.setState({show: false})
         }
+        return;
     };
+
+
 
     render() {
         const cards = [];
+        const show = this.onChange;
         for (let i = 0; i< appData.length; i++) {
             const image = appData[i].cardImage;
             const title = appData[i].cardTitle;
