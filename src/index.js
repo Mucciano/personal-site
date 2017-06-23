@@ -14,7 +14,7 @@ ReactDOM.render(
     <Router>
         <div>
             <Route exact path="/" component={Cards}/>
-            <Route path="/post/:id" component={Post}/>
+            <Route path="/:type/:index" component={Post}/>
         </div>
     </Router>,
 document.getElementById('root')

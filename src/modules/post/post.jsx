@@ -1,24 +1,28 @@
 import React from 'react';
 import PostHeader from './post-header';
 import './post.css';
-import {Link} from 'react-router-dom';
 import {appData} from '../../data/app-data';
 import Sticky from 'react-stickynode';
 
-function parseId(string) {
-    const matchExpression = new RegExp('[^/]+$');
-    const match = matchExpression.exec(string)[0];
-    return match ? parseInt(match) : 0;
+function parseUrl(string) {
+    let array = string.split('/');
+    const id = array.pop();
+    const type = array.pop();
+     return {
+         type: type,
+         id: id
+     }
 }
 
-function Post(props){
-    const index = parseId(location.pathname);
-    const data = appData[index];
+function Post(){
+    const {type, id} = parseUrl(location.pathname);
+    const post = appData[type];
+    const data = post[id];
 
     return(
         <div>
             <Sticky enabled={true}>
-                <PostHeader/>
+                <PostHeader show={true}/>
             </Sticky>
             <div className="postBody container">
                 <img src={data.postImage} alt="" className='postImg twelve columns'/>
