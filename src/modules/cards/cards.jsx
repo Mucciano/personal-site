@@ -5,11 +5,15 @@ import Header from '../header/header'
 import VisibiltySensor from 'react-visibility-sensor'
 import PostHeader from '../post/post-header';
 import Sticky from 'react-stickynode';
+import CardTypes from './cards-nav';
 
 export default class Cards extends Component {
     constructor(props) {
         super(props);
-        this.state = {show: false};
+        this.state = {
+            show: false,
+            cardType: 'code'
+        };
     }
 
     onChange = (isVisible) => {
@@ -18,19 +22,32 @@ export default class Cards extends Component {
         } else if (isVisible === true && this.state.show === true) {
             this.setState({show: false})
         }
-        return;
     };
+
+    handleChangeToCode = () => {
+        if (this.state.cardType !== 'code') {
+            this.setState({cardType: 'code'});
+        }
+    };
+
+    handleChangeToBlog = () => {
+        if (this.state.cardType !== 'blog') {
+            this.setState({cardType: 'blog'});
+        }
+    };
+
 
 
 
     render() {
         const cards = [];
+        const cardData = appData[this.state.cardType];
         const show = this.onChange;
-        for (let i = 0; i< appData.length; i++) {
-            const image = appData[i].cardImage;
-            const title = appData[i].cardTitle;
-            const body = appData[i].cardDetails;
-            const postId = appData[i].postId;
+        for (let i = 0; i< cardData.length; i++) {
+            const image = cardData[i].cardImage;
+            const title = cardData[i].cardTitle;
+            const body = cardData[i].cardDetails;
+            const postId = cardData[i].postId;
 
             cards[i] = (
                 <Card
@@ -39,6 +56,7 @@ export default class Cards extends Component {
                     title={title}
                     body={body}
                     postId={postId}
+                    type={this.state.cardType}
                 />
             );
         }
@@ -57,6 +75,11 @@ export default class Cards extends Component {
                     >
                         <Header/>
                     </VisibiltySensor>
+                    <CardTypes
+                        code={this.handleChangeToCode}
+                        blog={this.handleChangeToBlog}
+                        cardType={this.state.cardType}
+                    />
                 </div>
                 {cards}
             </div>
